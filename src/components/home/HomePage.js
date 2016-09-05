@@ -11,16 +11,18 @@ class HomePage extends React.Component {
     this.onPauseClick = this.onPauseClick.bind(this);
 
     this.state = {
-      play:false
-    }
+      paused:true
+    };
   }
 
   onStartClick() {
     console.log("start!!");
+    this.setState({paused:false});
   }
 
   onPauseClick() {
     console.log("pause!!");
+    this.setState({paused:true});
   }
 
   onPlay() {
@@ -48,7 +50,8 @@ class HomePage extends React.Component {
         <RadioPlayer
           onPlay={this.onPlay}
           onPause={this.onPause}
-          play={this.state.play}/>
+          stream="http://centova.radio.com.pt:9034/stream"
+          paused={this.state.paused}/>
 
       </div>
     );

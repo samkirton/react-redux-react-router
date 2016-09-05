@@ -4,17 +4,19 @@ const RadioPlayer = props => {
   return (
     <audio
       className="react-audio-player"
-      src="http://centova.radio.com.pt:9034/stream"
+      src={props.stream}
       autoPlay="false"
       onPlay={props.onPlay}
-      onPause={props.onPause}/>
+      onPause={props.onPause}
+      muted={props.paused}/>
   );
 };
 
 RadioPlayer.propTypes = {
+  stream: PropTypes.string.isRequired,
   onPlay: PropTypes.func.isRequired,
   onPause: PropTypes.func.isRequired,
-  play: PropTypes.bool.isRequired
+  paused: PropTypes.bool.isRequired
 };
 
 export default RadioPlayer;
