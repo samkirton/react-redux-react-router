@@ -3,16 +3,18 @@ import React, {PropTypes} from 'react';
 const RadioPlayer = props => {
   return (
     <audio
-      className="react-audio-player"
+      className="audio-player"
+      autoPlay="true"
       src={props.stream}
-      autoPlay="false"
+      onPlay={props.onPlay}
       muted={props.paused}/>
   );
 };
 
 RadioPlayer.propTypes = {
   stream: PropTypes.string.isRequired,
-  paused: PropTypes.bool.isRequired
+  paused: PropTypes.bool.isRequired ,
+  onPlay: PropTypes.func.isRequired
 };
 
 export default RadioPlayer;

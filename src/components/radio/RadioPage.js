@@ -1,9 +1,9 @@
 import React from 'react';
 
-import RadioPlayer from '../radio/RadioPlayer';
-import ControlButton from '../radio/ControlButton';
+import RadioPlayer from './RadioPlayer';
+import ControlButton from './ControlButton';
 
-class HomePage extends React.Component {
+class RadioPage extends React.Component {
 
   constructor() {
     super();
@@ -16,6 +16,10 @@ class HomePage extends React.Component {
     };
   }
 
+  onPlay() {
+    console.log('play');
+  }
+
   onStartClick() {
     this.setState({paused:false});
   }
@@ -26,9 +30,8 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <div className="jumbotron">
-        <h1>Admin</h1>
-        <p>Some admin functions</p>
+      <div>
+        <h1>Guarda, Rewind it</h1>
 
         <ControlButton
            onStartClick={this.onStartClick}
@@ -37,6 +40,7 @@ class HomePage extends React.Component {
 
         <RadioPlayer
           stream="http://centova.radio.com.pt:9034/stream"
+          onPlay={this.onPlay}
           paused={this.state.paused}/>
 
       </div>
@@ -44,4 +48,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default HomePage;
+export default RadioPage;
