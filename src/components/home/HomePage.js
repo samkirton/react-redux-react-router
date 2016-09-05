@@ -25,31 +25,22 @@ class HomePage extends React.Component {
     this.setState({paused:true});
   }
 
-  onPlay() {
-    console.log("play");
-  }
-
-  onPause() {
-    console.log("pause");
-  }
-
   render() {
     return (
       <div className="jumbotron">
         <h1>Admin</h1>
         <p>Some admin functions</p>
 
-        <div onClick={this.onStartClick}>
-          Start
+
+        <div onClick={this.onStartClick} className={this.state.paused ? 'show' : 'hide'}>
+          Play
         </div>
 
-        <div onClick={this.onPauseClick}>
+        <div onClick={this.onPauseClick} className={this.state.paused ? 'hide' : 'show'}>
           Pause
         </div>
 
         <RadioPlayer
-          onPlay={this.onPlay}
-          onPause={this.onPause}
           stream="http://centova.radio.com.pt:9034/stream"
           paused={this.state.paused}/>
 

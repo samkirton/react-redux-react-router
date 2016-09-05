@@ -17,3 +17,11 @@ nav {
 .react-audio-player {
   display: none;
 }
+
+.show {
+  display: inline;
+}
+
+.hide {
+  display: none;
+}
