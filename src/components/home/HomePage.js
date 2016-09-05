@@ -1,6 +1,7 @@
 import React from 'react';
 
 import RadioPlayer from '../radio/RadioPlayer';
+import ControlButton from '../radio/ControlButton';
 
 class HomePage extends React.Component {
 
@@ -16,12 +17,10 @@ class HomePage extends React.Component {
   }
 
   onStartClick() {
-    console.log("start!!");
     this.setState({paused:false});
   }
 
   onPauseClick() {
-    console.log("pause!!");
     this.setState({paused:true});
   }
 
@@ -31,14 +30,10 @@ class HomePage extends React.Component {
         <h1>Admin</h1>
         <p>Some admin functions</p>
 
-
-        <div onClick={this.onStartClick} className={this.state.paused ? 'show' : 'hide'}>
-          Play
-        </div>
-
-        <div onClick={this.onPauseClick} className={this.state.paused ? 'hide' : 'show'}>
-          Pause
-        </div>
+        <ControlButton
+           onStartClick={this.onStartClick}
+           onPauseClick={this.onPauseClick}
+           paused={this.state.paused} />
 
         <RadioPlayer
           stream="http://centova.radio.com.pt:9034/stream"
