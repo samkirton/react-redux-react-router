@@ -5,18 +5,49 @@ html {
   padding: 0;
 }
 
-html, body, h1 {
+html, body {
   margin: 0;
   padding: 0;
-  text-align: center;
+  font-family: 'Dosis', sans-serif;
 }
 
 #app {
 
 }
 
+div.radio-player-container {
+  background-color: #04221D;
+  height: 100%;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .audio-player {
   display: none;
+}
+
+div.on-air-rewind-it-radio {
+  margin-bottom: 7px;
+  color: #FCFAEF;
+  font-size: 2em;
+}
+
+div.on-air-with {
+  color: #445C81;
+  font-size: 1.8em;
+}
+
+div.on-air-guest {
+  margin-top: 7px;
+  color: #FCFAEF;
+  font-size: 2em;
+}
+
+div.control-buttons {
+  margin-top: 30px;
 }
 
 .show {
@@ -25,4 +56,39 @@ html, body, h1 {
 
 .hide {
   display: none;
+}
+
+div.event-details-container {
+  background-color: #092130;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+div.event-title {
+  margin-bottom: 25px;
+  font-size: 2em;
+  color: #67571F;
+}
+
+div.event-listing {
+  font-size: 2.2em;
+  color: #FCFAEF;
+}
+
+span.performance-type {
+  font-size: 0.5em;
+  color: #445C81;
+}
+
+div.event-details-specifics {
+  margin-top: 25px;
+  font-size: 2em;
+  color: #67571F;
+}
+
+div.event-facebook {
+  margin-top: 25px;
 }

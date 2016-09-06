@@ -2,14 +2,14 @@ import React, {PropTypes} from 'react';
 
 const ControlButton = props => {
   return (
-    <div>
+    <div className="control-buttons">
 
       <div onClick={props.onStartClick} className={props.paused ? 'show' : 'hide'}>
-        Play
+        Play >
       </div>
 
       <div onClick={props.onPauseClick} className={props.paused ? 'hide' : 'show'}>
-        Pause
+        Pause ||
       </div>
 
     </div>
