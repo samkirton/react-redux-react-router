@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 
 const OnAirLabel = props => {
   return (
-    <div className="onAir">
+    <div className="on-air">
 
       <div className="on-air-rewind-it-radio">
         Rewind It Radio
