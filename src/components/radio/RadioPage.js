@@ -4,6 +4,10 @@ import RadioPlayer from './RadioPlayer';
 import ControlButton from './ControlButton';
 import OnAirLabel from './OnAirLabel';
 
+import IconFacebook from '-!babel!svg-react!../../res/fb.svg';
+import IconLogo from '-!babel!svg-react!../../res/logo.svg';
+import IconPresent from '-!babel!svg-react!../../res/present.svg';
+
 class RadioPage extends React.Component {
 
   constructor() {
@@ -21,7 +25,7 @@ class RadioPage extends React.Component {
   }
 
   onPlay() {
-    console.log('play');
+    // TODO: show loading until this is called
   }
 
   onStartClick() {
@@ -44,11 +48,11 @@ class RadioPage extends React.Component {
             paused={this.state.paused}/>
 
           <div className="guarda">
-
+            <IconLogo />
           </div>
 
           <div className="presents">
-
+            <IconPresent />
           </div>
 
           <OnAirLabel
@@ -76,13 +80,13 @@ class RadioPage extends React.Component {
 
               <div>Sat 9om - 2am</div>
               <div>17-09-16</div>
-              <div>Stage 3, Hackney Empire</div>
+              <div>Stage 3, Hackney Empire, London</div>
 
             </div>
 
             <div className="event-facebook">
 
-               <img src="fb.svg" alt="Facebook event" />
+              <IconFacebook />
 
             </div>
 
