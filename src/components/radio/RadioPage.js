@@ -1,12 +1,7 @@
 import React from 'react';
 
-import RadioPlayer from './RadioPlayer';
-import ControlButton from './ControlButton';
-import OnAirLabel from './OnAirLabel';
 import EventListing from './EventListing';
-
-import IconLogo from '-!babel!svg-react!../../res/logo.svg';
-import IconPresent from '-!babel!svg-react!../../res/present.svg';
+import RadioPresentation from './RadioPresentation';
 
 import Grid from 'react-bootstrap/lib/Grid';
 import Col from 'react-bootstrap/lib/Col';
@@ -43,7 +38,7 @@ class RadioPage extends React.Component {
           {
             "name":"Mar Tu",
             "type":"VJ"
-          },
+          }
         ],
         day_time:"Sat 9am - 2am",
         date:"17-09-16",
@@ -78,35 +73,21 @@ class RadioPage extends React.Component {
         </div>
 
         <Grid className="radio-page">
+
           <Row className="show-grid">
+
             <Col xs={12} sm={6} md={6} lg={6} className="radio-grid">
 
-              <div className="radio-player-container">
-
-                <RadioPlayer
-                  stream={this.state.streamUrl}
-                  onPlay={this.onPlay}
-                  paused={this.state.paused}/>
-
-                <div className="guarda">
-                  <IconLogo />
-                </div>
-
-                <div className="presents">
-                  <IconPresent />
-                </div>
-
-                <OnAirLabel
-                  onAir={this.state.onAir}/>
-
-                <ControlButton
-                  onStartClick={this.onStartClick}
-                  onPauseClick={this.onPauseClick}
-                  paused={this.state.paused} />
-
-              </div>
+              <RadioPresentation
+                streamUrl={this.state.streamUrl}
+                onPlay={this.onPlay}
+                paused={this.state.paused}
+                onAir={this.state.onAir}
+                onStartClick={this.onStartClick}
+                onPauseClick={this.onPauseClick} />
 
             </Col>
+
             <Col xs={12} sm={6} md={6} lg={6}>
 
               <EventListing event={this.state.event} />
