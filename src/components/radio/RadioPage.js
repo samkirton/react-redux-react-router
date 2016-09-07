@@ -3,14 +3,14 @@ import React from 'react';
 import RadioPlayer from './RadioPlayer';
 import ControlButton from './ControlButton';
 import OnAirLabel from './OnAirLabel';
+import EventListing from './EventListing';
 
-import IconFacebook from '-!babel!svg-react!../../res/fb.svg';
 import IconLogo from '-!babel!svg-react!../../res/logo.svg';
 import IconPresent from '-!babel!svg-react!../../res/present.svg';
 
-import Grid from 'react-bootstrap/lib/Grid'
+import Grid from 'react-bootstrap/lib/Grid';
 import Col from 'react-bootstrap/lib/Col';
-import Row from 'react-bootstrap/lib/Row'
+import Row from 'react-bootstrap/lib/Row';
 
 class RadioPage extends React.Component {
 
@@ -24,7 +24,32 @@ class RadioPage extends React.Component {
     this.state = {
       paused:true,
       onAir:"DJ Nudge presenting Techtouch project",
-      streamUrl:"http://centova.radio.com.pt:9034/stream"
+      streamUrl:"http://centova.radio.com.pt:9034/stream",
+      event:{
+        title:"UPCOMING EVENT",
+        acts:[
+          {
+            "name":"WLS",
+            "type":"live"
+          },
+          {
+            "name":"Samad",
+            "type":"DJ set"
+          },
+          {
+            "name":"Lorac",
+            "type":"DJ set"
+          },
+          {
+            "name":"Mar Tu",
+            "type":"VJ"
+          },
+        ],
+        day_time:"Sat 9am - 2am",
+        date:"17-09-16",
+        location:"Stage 3, Hackney Empire, London",
+        facebook_event_url:"#"
+      }
     };
   }
 
@@ -84,35 +109,12 @@ class RadioPage extends React.Component {
             </Col>
             <Col xs={12} sm={6} md={6} lg={6}>
 
-              <div className="event-details-container">
-
-                <div className="event-title">UPCOMING EVENT</div>
-
-                <div className="event-listing">
-                  <div >WLS <span className="performance-type">(live)</span></div>
-                  <div>Samad <span className="performance-type">(DJ set)</span></div>
-                  <div>Lorac <span className="performance-type">(DJ set)</span></div>
-                  <div>Mar Tu <span className="performance-type">(VJ)</span></div>
-                </div>
-
-                <div className="event-details-specifics">
-
-                  <div>Sat 9om - 2am</div>
-                  <div className="event-details-specifics-date">17-09-16</div>
-                  <div>Stage 3, Hackney Empire, London</div>
-
-                </div>
-
-                <div className="event-facebook">
-
-                  <IconFacebook />
-
-                </div>
-
-              </div>
+              <EventListing event={this.state.event} />
 
             </Col>
+
           </Row>
+
         </Grid>
 
       </div>

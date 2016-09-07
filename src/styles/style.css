@@ -15,6 +15,10 @@ body {
 
 }
 
+img {
+  border: 0;
+}
+
 .background_left {
   background-color: #04221D;
   position: absolute;
