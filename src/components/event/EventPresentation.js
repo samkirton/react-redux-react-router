@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 
 import IconFacebook from '-!babel!svg-react!../../res/fb.svg';
 
-const EventListing = props => {
+const EventPresentation = props => {
   return (
     <div className="event-details-container">
 
@@ -34,8 +34,8 @@ const EventListing = props => {
   );
 };
 
-EventListing.propTypes = {
+EventPresentation.propTypes = {
   event: PropTypes.object.isRequired
 };
 
-export default EventListing;
+export default EventPresentation;

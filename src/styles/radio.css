@@ -1,0 +1,61 @@
+div.radio-player-container {
+  background-color: #04221D;
+  text-align: center;
+  padding-top: 25%;
+  padding-bottom: 50px;
+}
+
+div.presents {
+  margin-top: 20px;
+  margin-bottom: 26px;
+}
+
+.audio-player {
+  display: none;
+}
+
+div.on-air {
+
+}
+
+div.on-air-rewind-it-radio {
+  margin-bottom: 7px;
+  color: #FCFAEF;
+  font-size: 2em;
+}
+
+div.on-air-with {
+  color: #445C81;
+  font-size: 1.8em;
+}
+
+div.on-air-guest {
+  margin-top: 7px;
+  color: #FCFAEF;
+  font-size: 2em;
+}
+
+div.control-buttons {
+  margin-top: 26px;
+}
+
+@media only screen and (min-width : 992px) {
+
+  div.radio-player-container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+
+@media only screen and (max-width : 768px) {
+
+  div.radio-grid {
+    padding: 0;
+  }
+
+  div.radio-player-container {
+    padding-top: 16%;
+  }
+}
+

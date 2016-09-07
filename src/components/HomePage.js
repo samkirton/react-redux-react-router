@@ -1,13 +1,13 @@
 import React from 'react';
 
-import EventListing from './EventListing';
-import RadioPresentation from './RadioPresentation';
+import EventListing from './event/EventPresentation';
+import RadioPresentation from './radio/RadioPresentation';
 
 import Grid from 'react-bootstrap/lib/Grid';
 import Col from 'react-bootstrap/lib/Col';
 import Row from 'react-bootstrap/lib/Row';
 
-class RadioPage extends React.Component {
+class HomePage extends React.Component {
 
   constructor() {
     super();
@@ -50,6 +50,7 @@ class RadioPage extends React.Component {
 
   onPlay() {
     // TODO: show loading until this is called
+    console.log('play');
   }
 
   onStartClick() {
@@ -72,7 +73,7 @@ class RadioPage extends React.Component {
           &nbsp;
         </div>
 
-        <Grid className="radio-page">
+        <Grid className="home-radio-page">
 
           <Row className="show-grid">
 
@@ -103,4 +104,4 @@ class RadioPage extends React.Component {
   }
 }
 
-export default RadioPage;
+export default HomePage;
