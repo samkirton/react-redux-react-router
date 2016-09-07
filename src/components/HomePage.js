@@ -1,7 +1,8 @@
 import React from 'react';
 
-import EventListing from './event/EventPresentation';
+import HomePresentation from './HomePresentation';
 import RadioPresentation from './radio/RadioPresentation';
+import EventPresentation from './event/EventPresentation';
 
 import Grid from 'react-bootstrap/lib/Grid';
 import Col from 'react-bootstrap/lib/Col';
@@ -15,8 +16,9 @@ class HomePage extends React.Component {
     this.onStartClick = this.onStartClick.bind(this);
     this.onPauseClick = this.onPauseClick.bind(this);
 
-    // TODO: The onAir and streamUrl should be retrieved from an api
+    // TODO: This data should be retrieved from an api
     this.state = {
+      showRadio:false,
       paused:true,
       onAir:"DJ Nudge presenting Techtouch project",
       streamUrl:"http://centova.radio.com.pt:9034/stream",
@@ -50,7 +52,6 @@ class HomePage extends React.Component {
 
   onPlay() {
     // TODO: show loading until this is called
-    console.log('play');
   }
 
   onStartClick() {
@@ -79,19 +80,25 @@ class HomePage extends React.Component {
 
             <Col xs={12} sm={6} md={6} lg={6} className="radio-grid">
 
-              <RadioPresentation
+              {
+                this.state.showRadio && <RadioPresentation
                 streamUrl={this.state.streamUrl}
                 onPlay={this.onPlay}
                 paused={this.state.paused}
                 onAir={this.state.onAir}
                 onStartClick={this.onStartClick}
                 onPauseClick={this.onPauseClick} />
+              }
+              {
+                !this.state.showRadio && <HomePresentation />
+              }
 
             </Col>
 
             <Col xs={12} sm={6} md={6} lg={6}>
 
-              <EventListing event={this.state.event} />
+              <EventPresentation
+                event={this.state.event} />
 
             </Col>
 
