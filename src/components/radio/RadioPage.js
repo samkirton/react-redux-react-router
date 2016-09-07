@@ -44,17 +44,17 @@ class RadioPage extends React.Component {
     return (
       <div>
 
-        <div className="test">
-                       r
+        <div className="background_left">
+          &nbsp;
         </div>
 
-        <div className="test2">
-          t
+        <div className="background_right">
+          &nbsp;
         </div>
 
         <Grid className="radio-page">
           <Row className="show-grid">
-            <Col xs={12} sm={6} md={6} lg={6}>
+            <Col xs={12} sm={6} md={6} lg={6} className="radio-grid">
 
               <div className="radio-player-container">
 

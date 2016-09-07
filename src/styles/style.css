@@ -3,36 +3,35 @@ html {
   padding: 0;
 }
 
-html, body {
+body {
+  background-color: #092130;
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.9em;
   margin: 0;
   padding: 0;
-  font-family: 'Dosis', sans-serif;
-  font-size: 0.8em;
 }
 
 #app {
 
 }
 
-.mew {
-  background-color: #00FF00;
-}
-
-.test {
+.background_left {
   background-color: #04221D;
   position: absolute;
   z-index: -1;
   width: 50%;
   height: 100%;
+  display: inline;
 }
 
-.test2 {
+.background_right {
   background-color: #092130;
   position: absolute;
   z-index: -1;
   width: 50%;
   left: 50%;
   height: 100%;
+  display: inline;
 }
 
 div.radio-page {
@@ -44,8 +43,6 @@ div.radio-player-container {
   text-align: center;
   padding-top: 25%;
   padding-bottom: 50px;
-  padding-left: 100px;
-  padding-right: 100px;
 }
 
 div.presents {
@@ -95,12 +92,10 @@ div.event-details-container {
   text-align: center;
   padding-top: 25%;
   padding-bottom: 50px;
-  padding-left: 100px;
-  padding-right: 100px;
 }
 
 div.event-title {
-  margin-top: 6px;
+  margin-top: 32px;
   margin-bottom: 25px;
   font-size: 2em;
   color: #67571F;
@@ -112,7 +107,7 @@ div.event-listing {
 }
 
 span.performance-type {
-  font-size: 0.5em;
+  font-size: 0.8em;
   color: #445C81;
 }
 
@@ -128,4 +123,39 @@ div.event-details-specifics {
 
 div.event-facebook {
   margin-top: 25px;
+}
+
+@media only screen and (min-width : 992px) {
+  div.event-details-container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  div.radio-player-container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+
+  div.radio-grid {
+    padding: 0;
+  }
+
+  div.radio-player-container {
+    padding-top: 16%;
+  }
+
+  div.event-details-container {
+    padding-top: 16%;
+  }
+
+  .background_right {
+    display: none;
+  }
+
+  .background_left {
+    display: none;
+  }
 }
