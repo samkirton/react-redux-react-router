@@ -45,7 +45,7 @@ class HomePage extends React.Component {
         day_time:"Sat 9am - 2am",
         date:"17-09-16",
         location:"Stage 3, Hackney Empire, London",
-        facebook_event_url:"#"
+        facebook_event_url:"https://www.facebook.com/events/1140162162688718/"
       }
     };
   }
