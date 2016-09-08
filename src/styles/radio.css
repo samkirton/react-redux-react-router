@@ -39,6 +39,12 @@ div.control-buttons {
   margin-top: 26px;
 }
 
+div.control-buttons-text {
+  margin-top: 10px;
+  font-size: 2em;
+  color: #6A792D;
+}
+
 @media only screen and (min-width : 992px) {
 
   div.radio-player-container {

@@ -18,7 +18,7 @@ class HomePage extends React.Component {
 
     // TODO: This data should be retrieved from an api
     this.state = {
-      showRadio:false,
+      showRadio:true,
       paused:true,
       onAir:"DJ Nudge presenting Techtouch project",
       streamUrl:"http://centova.radio.com.pt:9034/stream",
