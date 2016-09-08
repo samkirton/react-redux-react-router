@@ -9,12 +9,12 @@ const ControlButton = props => {
 
       <div onClick={props.onStartClick} className={props.paused ? 'show' : 'hide'}>
         <Play />
-        <div className="control-buttons-text">Play</div>
+        <div className="control-buttons-text">PLAY</div>
       </div>
 
       <div onClick={props.onPauseClick} className={props.paused ? 'hide' : 'show'}>
         <Pause />
-        <div className="control-buttons-text">Pause</div>
+        <div className="control-buttons-text">PAUSE</div>
       </div>
 
     </div>
